@@ -1,0 +1,505 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.hide{
+    display: none !important;
+}
+.show{
+    display: block !important;
+}
+.focus{
+    box-shadow: 0 0 5px white;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(32, 32, 112);
+    color: white;
+    padding: .3rem 1.5rem;
+    border-bottom: 1px solid rgb(122, 122, 122);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100vw;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+header a:hover{
+    color: white;
+}
+/* header bagian kiri */
+header .left{
+    display: flex;
+    align-items: center;
+}
+header .left form{
+    border-radius: 3px;
+    font-size: 16px;
+    padding: .2em .7em;
+    margin: 0 15px;
+    width: 400px;
+    background-color: rgba(62, 62, 150, 0.5);
+}
+header .left form input{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    margin-left: 5px;
+    width: 350px;
+    font-size: 1.2em;
+}
+/* header bagian kanan */
+header .right a{
+    font-size: 24px;
+    margin: 0 10px;
+    color: rgba(255, 255, 255, 0.5)
+}
+header .right a:hover{
+    color: white;
+}
+.select-page{
+    color: white;
+}
+header button{
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: black;
+    background-color: rgb(78, 176, 214);
+    font-size: 24px;
+    padding: .1em .35em;
+    border-radius: 3px;
+}
+
+/* tablet */
+/* humberger menu */
+.humberger{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.humberger span{
+    height: 2px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.responsive-header{
+    display: none;
+}
+/* search */
+header form #inputCariR{
+    width: 65vw;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    padding: 2px 10px;
+    font-size: 1em;
+}
+header .closeMenuR{
+    font-size: 1.5em;
+}
+
+/* responsive header */
+@media screen and (min-width: 769px) {
+    .responsive-header{
+        display: none !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .main-header{
+        display: none !important;
+    }
+    .responsive-header{
+        display: flex;
+    }
+    header .menuHumberger{
+        flex-direction: column;
+    }
+    .humberger{
+        font-size: 1.5rem;
+    }
+    .closeMenu{
+        font-size: 1.5em;
+        margin-bottom: 1.5em;
+        margin-left: .2em !important;
+        cursor: pointer;
+    }
+    header .menuHumberger{
+        list-style: none;
+        font-size: 3.5vw;
+        display: none;
+        background-color: rgb(32, 32, 112);;
+        /* cursor: pointer; */
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 999;
+        padding: 10px .5em;
+    }
+    header .menuHumberger .write-content{
+        margin: 0 auto;
+    }
+    header .menuHumberger a{
+        margin: .5em 0;
+    }
+    header .menuHumberger i{
+        margin: 0 .5em;
+    }
+}
+@media screen and (max-width: 425px){
+    header{
+        padding: .3rem .2rem .3rem .2rem;
+    }
+    header .menuHumberger{
+        font-size: 5.5vw;
+    }
+    header .cariR{
+        margin-right: 10px;
+    }
+    header .closeMenuR{
+        margin-right: 10px;
+    }
+}
+
+
+/* Section */
+section{
+    padding: 3em 0;
+    background-color: rgb(32, 32, 112);
+    min-height: 100vh;
+}
+section .container{
+    display: flex;
+    margin: 3vw 5vw;
+}
+section .main{
+    flex: 6;
+}
+
+/* main */
+main{
+    box-sizing: border-box;
+    padding: .5vw 4rem 2rem 8rem;
+}
+main .post{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: .6em;
+}
+main .post img{
+    border-radius: 50%;
+    margin-right: 2em;
+}
+main .post .upload{
+    width: 80%;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 30px;
+    padding: .2em .5em;
+    text-align: left;
+    background-color: rgba(128, 128, 128, 0.2);
+    color: grey;
+    cursor: pointer;
+}
+main .post .upload:hover{
+    background-color: rgba(128, 128, 128, 0.4);
+}
+main .postingan{
+    background-color: #fff;
+    margin: 1em 0;
+    padding: .6em;
+    border-radius: 6px;
+}
+main .postingan .headerPostingan{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+main .postingan .headerPostingan a{ 
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+main .postingan .headerPostingan a img{
+    border-radius: 50%;
+    margin-right: 1em;
+}
+main .postingan .headerPostingan a .ident .tanggal{
+    font-size: .8em;
+    color: grey;
+}
+main .postingan .headerPostingan .opsi{
+    width: 35px;
+    height: 35px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .5em;
+    border-radius: 50%;
+    background-color: transparent;
+}
+main .postingan .headerPostingan .opsi:hover{
+    background-color: #cecece80;
+}
+main .postingan .headerPostingan .opsi span{
+    background-color: grey;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+main .postingan .headerPostingan .opsiAksi{
+    position: absolute;
+    box-sizing: border-box;
+    top: 35px;
+    right: 20px;
+    width: 200px;
+    background-color: #fff;
+    padding: 1em;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2em;
+    font-size: 1.2em;
+    border-radius: 3px;
+}
+main .postingan .headerPostingan .opsiAksi a{
+    font-weight: 500;
+}
+main .postingan .headerPostingan .opsiAksi a:hover{
+    transform: scale(1.2);
+}
+main .postingan .headerPostingan .opsiAksi p:hover{
+    transform: scale(1.2);
+}
+main .postingan .headerPostingan .opsiAksi .tutupAksi{
+    cursor: pointer;
+    color: red;
+    font-weight: 600;
+}
+main .postingan .mainPostingan{
+    margin: 1em 0;
+    box-sizing: border-box;
+}
+main .postingan .mainPostingan h1{
+    font-size: 2em;
+}
+main .postingan .mainPostingan p{
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+main .postingan .footerPostingan{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    margin: .1em;
+    border-top: 1px solid grey;
+    padding-top: .3em;
+}
+main .postingan .footerPostingan li{
+    cursor: pointer;
+}
+/* responsive main */
+/* tablet */
+@media screen and (max-width: 768px) {
+    main{
+        padding: 0;
+    }
+}
+/* phone */
+@media screen and (max-width: 425px) {
+    main .post{
+        font-size: .6em;
+    }
+}
+
+
+/* aside */
+section .aside{
+    color: white;
+    flex: 3;
+    padding: 0 .6em .6em .6em;
+}
+section .aside .thanks hr{
+    color: grey;
+    margin: .4em 0; 
+}
+section .container .aside .thanks{
+    padding: 0 0 .6em 0;
+}
+section .container .aside .thanks .sThanks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+section .container .aside .thanks .sThanks a{
+    display: flex;
+    color: inherit;
+    text-decoration: none;
+}
+section .container .aside .thanks .sThanks img{
+    width: 35px;
+    height: 35px;
+    border-radius: 3px;
+    margin-right: .4em;
+}
+section .container .aside .contact{
+    margin: 2.5em 0;
+}
+section .container .aside .contact hr{
+    color: grey;
+    margin: .4em 0; 
+} 
+section .container .aside .contact ul li i{
+    font-size: 1.8em;
+    margin-right:.2em;
+}
+section .container .aside .contact ul li{
+    list-style: none;
+    padding: .4em .25em;
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+section .container .aside .contact ul li a{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+section .container .aside .footerAside{
+    text-align: center;
+    font-size: 1em;
+}
+
+/* resposive tablet */
+@media screen and (max-width: 768px) {
+    section .container{
+        flex-direction: column;
+    }
+    section .container .aside{
+        display: grid;
+        grid-template-areas:    'thanks contact'
+                                'footer footer';
+        column-gap: 3em;
+        margin-top: 10em;
+    }
+    section .container .aside .thanks{
+        grid-area: thanks;
+        margin-top: 0;
+    }
+    section .container .aside .thanks .sThanks .ic{
+        display: none;
+    }
+    section .container .aside .contact{
+        grid-area: contact;
+        margin-top: 0;
+    }
+    section .container .aside .footerAside{
+        grid-area: footer;
+    }
+}
+/* responsive hp */
+@media screen and (max-width: 425px) {
+    section .container .aside{
+        column-gap: 1em;
+    }
+}
+@media screen and (max-width: 375px) {
+    section .container .aside{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+/* everlay upload content */
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+    transition: .5s;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overlay .containerOverlay{
+    background-color: #fff;
+    border-radius: 6px;
+    width: 500px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.overlay .overlayHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+.overlay .overlayHeader button[class="closeOverlay"]{
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.overlay .upload{
+    padding: .5em 1em;
+}
+.overlay .upload textarea,
+.overlay .upload input{
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 100%;
+    padding: .5rem .2rem;
+    margin: .3rem 0;
+    outline: none;
+    border: none;
+}
+.overlay .upload input{
+    font-size: 2em;
+}
+.overlay .upload textarea{
+    font-size: 1.2em;
+    min-height: 100px;
+    max-height: 100px;
+}
+.overlay .upload input[type="submit"]{
+    font-size: 1em;
+    background-color: rgb(0, 81, 255);
+    color: white;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+}

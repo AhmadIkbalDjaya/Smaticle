@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.hide{
+    display: none !important;
+}
+.show{
+    display: block !important;
+}
+.focus{
+    box-shadow: 0 0 5px white;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(32, 32, 112);
+    color: white;
+    padding: .3rem 1.5rem;
+    border-bottom: 1px solid rgb(122, 122, 122);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100vw;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+header a:hover{
+    color: white;
+}
+/* header bagian kiri */
+header .left{
+    display: flex;
+    align-items: center;
+}
+header .left form{
+    border-radius: 3px;
+    font-size: 16px;
+    padding: .2em .7em;
+    margin: 0 15px;
+    width: 400px;
+    background-color: rgba(62, 62, 150, 0.5);
+}
+header .left form input{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    margin-left: 5px;
+    width: 350px;
+    font-size: 1.2em;
+}
+/* header bagian kanan */
+header .right a{
+    font-size: 24px;
+    margin: 0 10px;
+    color: rgba(255, 255, 255, 0.5)
+}
+header .right a:hover{
+    color: white;
+}
+.select-page{
+    color: white;
+}
+header button{
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: black;
+    background-color: rgb(78, 176, 214);
+    font-size: 24px;
+    padding: .1em .35em;
+    border-radius: 3px;
+}
+
+/* tablet */
+/* humberger menu */
+.humberger{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.humberger span{
+    height: 2px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.responsive-header{
+    display: none;
+}
+/* search */
+header form #inputCariR{
+    width: 65vw;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    padding: 2px 10px;
+    font-size: 1em;
+}
+header .closeMenuR{
+    font-size: 1.5em;
+}
+
+/* responsive header */
+@media screen and (min-width: 769px) {
+    .responsive-header{
+        display: none !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .main-header{
+        display: none !important;
+    }
+    .responsive-header{
+        display: flex;
+    }
+    header .menuHumberger{
+        flex-direction: column;
+    }
+    .humberger{
+        font-size: 1.5rem;
+    }
+    .closeMenu{
+        font-size: 1.5em;
+        margin-bottom: 1.5em;
+        margin-left: .2em !important;
+        cursor: pointer;
+    }
+    header .menuHumberger{
+        list-style: none;
+        font-size: 3.5vw;
+        display: none;
+        background-color: rgb(32, 32, 112);;
+        /* cursor: pointer; */
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 999;
+        padding: 10px .5em;
+    }
+    header .menuHumberger .write-content{
+        margin: 0 auto;
+    }
+    header .menuHumberger a{
+        margin: .5em 0;
+    }
+    header .menuHumberger i{
+        margin: 0 .5em;
+    }
+}
+@media screen and (max-width: 425px){
+    header{
+        padding: .3rem .2rem .3rem .2rem;
+    }
+    header .menuHumberger{
+        font-size: 5.5vw;
+    }
+    header .cariR{
+        margin-right: 10px;
+    }
+    header .closeMenuR{
+        margin-right: 10px;
+    }
+}
+
+/* Section */
+section{
+    padding: 3em 0;
+    background-color: rgb(32, 32, 112);
+    min-height: 100vh;
+}
+section .container{
+    display: flex;
+    justify-content: center;
+    margin: 3vw 5vw;
+}
+
+/* main */
+main{
+    box-sizing: border-box;
+    padding: .5vw 8rem 2rem 8rem;
+    width: 70vw;
+    margin-top: 3em;
+}
+main .post{
+    /* font-size: 16px; */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: .6em;
+    /* margin-top: 1.5em; */
+}
+main .post img{
+    border-radius: 50%;
+    margin-right: 2em;
+}
+main .postingan{
+    background-color: #fff;
+    margin: 1em 0;
+    padding: .6em;
+    border-radius: 6px;
+}
+main .postingan .headerPostingan{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+main .postingan .headerPostingan a{ 
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+main .postingan .headerPostingan a img{
+    border-radius: 50%;
+    margin-right: 1em;
+}
+main .postingan .headerPostingan a .ident .tanggal{
+    font-size: .8em;
+    color: grey;
+}
+main .postingan .mainPostingan{
+    margin: 1em 0;
+}
+main .postingan .mainPostingan h1{
+    font-size: 2em;
+}
+main .postingan .mainPostingan p{
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+/* form edit content */
+.editContent{
+    padding: .5em 1em;
+}
+.editContent textarea,
+.editContent input{
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 100%;
+    padding: .5rem .2rem;
+    margin: .3rem 0;
+    outline: none;
+    border: none;
+}
+.editContent input{
+    font-size: 2em;
+}
+.editContent textarea{
+    font-size: 1.2em;
+    min-height: 100px;
+    max-height: 100px;
+}
+.editContent input[type="submit"]{
+    font-size: 1em;
+    background-color: rgb(0, 81, 255);
+    color: white;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+    main{
+        padding: 0;
+    }
+}
+@media screen and (max-width: 425px) {
+    section .container{
+        margin: 0;
+    }
+    main{
+        width: 80vw;
+        padding: 0;
+    }
+    .main .postingan{
+        font-size: 1em;
+    }
+    .main .postingan table input{
+        font-size: .8em;
+    }
+}@media screen and (max-width: 320px) {
+    section .container{
+        margin: 0;
+    }
+    main{
+        width: 95vw;
+        padding: 0;
+    }
+}
